@@ -1,27 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+<!-- <div> -->
+   <h1 class="text-4xl">Create Items</h1>
+  <div class="m-2 p-2 bg-gray-200">
+  <input class="bg-blue-200 p-2 m-2" type="text" v-model="newItem" />
+  <button @onclick="storeItem">Save</button>
+  <button class="ml-5 p-2 bg-pink-300 rounded" @onclick="storeItem">Save</button>
+  </div>
+<!-- </div> -->
 </template>
 
-<script lang="ts">
-import { Options, Vue } from 'vue-class-component';
-import HelloWorld from './components/HelloWorld.vue';
-
-@Options({
-  components: {
-    HelloWorld,
+<script>
+export default {
+  name:"App",
+  data() {
+    return {
+      newItem:"",
+      items:[],
+    };
   },
-})
-export default class App extends Vue {}
+  methods: {
+    storeItem() {
+      this.items.push(this.newItem);
+    }
+  }
+}
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
+

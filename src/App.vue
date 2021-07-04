@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>{{title}}</h1>
+    <input v-model="title" type="text" />
     <p v-for="item in items" :key="item.id">ID: {{ item.id }} {{item.title}}</p>
   </div>
 </template>

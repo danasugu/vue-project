@@ -4,6 +4,11 @@
   <div class="m-2 p-2 bg-gray-200">
   <input class="bg-blue-200 p-2 m-2 rounded" type="text" v-model="newItem" />
   <button class="ml-5 p-2 bg-pink-300 rounded" @onclick="storeItem">Save</button>
+  <div class="m-2 p-2 bg-gray-300">
+    <ul>
+      <li></li>
+    </ul>
+  </div>
   </div>
 </div>
 

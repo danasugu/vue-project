@@ -1,8 +1,10 @@
 <template>
 <div>
     <h1 class="text-4xl">Create Items</h1>
-  <div class="m-2 p-2 bg-gray-200">ds</div>
-  <input type="text" v-model="newItem" />
+  <div class="m-2 p-2 bg-gray-200">
+  <input class="bg-blue-200 p-2 m-2" type="text" v-model="newItem" />
+  <button @onclick="storeItem">Save</button>
+  </div>
 </div>
 
 </template>

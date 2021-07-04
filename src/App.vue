@@ -11,7 +11,7 @@ export default {
   name: 'App',
   data(){
     return{
-      title:"this is the title",
+      title:"",
       items:[
       {id:1, title:"this is item 1"},  
       {id:2, title:"this is item 2"},  

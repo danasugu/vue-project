@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>{{title}}</h1>
-    <p v-for="item in items" :key="item.id">{{item.title}}</p>
+    <p v-for="item in items" :key="item.id">ID: {{ item.id }} {{item.title}}</p>
   </div>
 </template>
 

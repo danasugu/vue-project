@@ -6,7 +6,7 @@
   <button class="ml-5 p-2 bg-pink-300 rounded" @onclick="storeItem">Save</button>
   <div class="m-2 p-2 bg-gray-300">
     <ul>
-      <li></li>
+      <li v-for="item in items" :key="item">{{ item }}</li>
     </ul>
   </div>
   </div>
@@ -19,9 +19,14 @@ export default {
   name: 'App',
   data(){
     return{
-      newItem:'',
+      newItem:"",
       items:[],
       }
+    },
+    methods: {
+      storeItem() {
+        this.items.push(this.newItem);
+      },
     }
   };
 </script>
